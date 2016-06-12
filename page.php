@@ -7,32 +7,37 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * @link    https://codex.wordpress.org/Template_Hierarchy
  *
  * @package enter
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="wrap">
+	<div class="pure-g row">
 
-			<?php
-			while ( have_posts() ) : the_post();
+		<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
+			<main id="main" class="col site-main" role="main">
 
-				get_template_part( 'template-parts/content', 'page' );
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				<?php
+				while ( have_posts() ) : the_post();
 
-			endwhile; // End of the loop.
-			?>
+					get_template_part( 'template-parts/content', 'page' );
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
 
-<?php
-get_sidebar();
-get_footer();
+				endwhile; // End of the loop.
+				?>
+
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+		<?php get_sidebar(); ?>
+
+	</div>
+</div>
