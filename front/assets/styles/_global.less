@@ -1,0 +1,83 @@
+/* --------------------------------------------------------------
+* = 样式重置
+* ----------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------
+* = 通用样式
+* ----------------------------------------------------------- */
+
+// css3动画效果
+.animated{ -webkit-animation-duration:0.5s; animation-duration:0.5s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
+@-webkit-keyframes fadeInDown{ 0%{ opacity:0; -webkit-transform:translateY(-20px); transform:translateY(-20px);} 100%{ opacity:1; -webkit-transform:translateY(0); transform:translateY(0);}}
+@keyframes fadeInDown{ 0%{ opacity:0; -webkit-transform:translateY(-20px); -ms-transform:translateY(-20px); transform:translateY(-20px);} 100%{ opacity:1; -webkit-transform:translateY(0); -ms-transform:translateY(0); transform:translateY(0);}}
+.fadeInDown{ -webkit-animation-name:fadeInDown; animation-name:fadeInDown;}
+@-webkit-keyframes fadeInUp{ 0%{ opacity:0; -webkit-transform:translateY(20px); transform:translateY(20px);} 100%{ opacity:1; -webkit-transform:translateY(0); transform:translateY(0);}}
+@keyframes fadeInUp{ 0%{ opacity:0; -webkit-transform:translateY(20px); -ms-transform:translateY(20px); transform:translateY(20px);} 100%{ opacity:1; -webkit-transform:translateY(0); -ms-transform: translateY(0); transform:translateY(0);}}
+.fadeInUp{ -webkit-animation-name: fadeInUp; animation-name: fadeInUp;}
+@-webkit-keyframes fadeInLeft{ 0%{ opacity:0; -webkit-transform:translateX(-20px); transform:translateX(-20px);} 100%{ opacity:1; -webkit-transform:translateX(0); transform:translateX(0);}}
+@keyframes fadeInLeft{ 0%{ opacity:0; -webkit-transform:translateX(-20px); -ms-transform:translateX(-20px); transform:translateX(-20px);} 100%{ opacity: 1; -webkit-transform:translateX(0); -ms-transform:translateX(0); transform:translateX(0);}}
+.fadeInLeft{ -webkit-animation-name:fadeInLeft; animation-name:fadeInLeft;}
+
+.sep{
+    margin-bottom: 15px;
+}
+
+.pure-button{
+    margin-right: 5px;
+}
+
+.offside{
+    ul{
+        padding: 30px;
+    }
+    .col{
+        padding: 0;
+        ul{
+            padding: 0;
+        }
+    }
+}
+
+
+/* --------------------------------------------------------------
+* = 排版
+* ----------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------
+* = 页头
+* ----------------------------------------------------------- */
+.demo-header{
+    background: #2d3e50;
+    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+    padding: 1.5em;
+    color: #fff;
+    margin-bottom: 30px;
+    h1,h3{
+        color: #fff;
+    }
+}
+
+/* --------------------------------------------------------------
+* = 页脚
+* ----------------------------------------------------------- */
+.demo-footer{
+    border-top: 1px solid #eee;
+    padding: 1.5em;
+    margin-top: 30px;
+}
+
+/* --------------------------------------------------------------
+* = 边栏
+* ----------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------
+* = 首页
+* ----------------------------------------------------------- */
+
+
+/* --------------------------------------------------------------
+* = 媒体查询
+* ----------------------------------------------------------- */

@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js",
+        "scripts/plugins/*.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.less"
+      ],
+      "main": true
+    },
+    "modernizr.js": {
+      "bower": ["modernizr"]
+    }
+  },
+  "paths": {
+    "source": "assets/",
+    "dist": "dist/"
+  }
+}
