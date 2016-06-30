@@ -16,4 +16,4 @@ if ( ! is_active_sidebar( 'sidebar-main' ) || wp_is_mobile() ) {
 	<div class="col">
 		<?php dynamic_sidebar( 'sidebar-main' ); ?>
 	</div>
-</aside><!-- #secondary -->
+</aside>

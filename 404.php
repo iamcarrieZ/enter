@@ -16,9 +16,10 @@ get_header(); ?>
 				<main id="main" class="col site-main" role="main">
 
 					<section class="error-404 not-found">
+
 						<header class="page-header">
 							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'enter' ); ?></h1>
-						</header><!-- .page-header -->
+						</header>
 
 						<div class="page-content">
 							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'enter' ); ?></p>
@@ -28,7 +29,7 @@ get_header(); ?>
 
 							the_widget( 'WP_Widget_Recent_Posts' );
 
-							// Only show the widget if site has multiple categories.
+							// 只有网站有多个分类时显示分类目录
 							if ( enter_categorized_blog() ) :
 								?>
 
@@ -45,12 +46,11 @@ get_header(); ?>
 										] );
 										?>
 									</ul>
-								</div><!-- .widget -->
+								</div>
 
 								<?php
 							endif;
 
-							/* translators: %1$s: smiley */
 							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'enter' ), convert_smilies( ':)' ) ) . '</p>';
 							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
@@ -58,9 +58,10 @@ get_header(); ?>
 							?>
 
 						</div><!-- .page-content -->
-					</section><!-- .error-404 -->
 
-				</main><!-- #main -->
+					</section>
+
+				</main>
 			</div><!-- #primary -->
 
 		</div>
