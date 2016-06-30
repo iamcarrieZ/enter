@@ -2,12 +2,12 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @link    https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package enter
  */
 
-if ( ! is_active_sidebar( 'sidebar-main' ) ) {
+if ( ! is_active_sidebar( 'sidebar-main' ) || wp_is_mobile() ) {
 	return;
 }
 ?>
