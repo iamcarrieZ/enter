@@ -28,16 +28,16 @@ get_header(); ?>
 					<?php
 
 					while ( have_posts() ) : the_post();
-						get_template_part( 'template-parts/content', get_post_format() );
+						get_template_part( 'wizhi/content', 'list');
 					endwhile;
 
 					if ( function_exists( 'wizhi_pagination' ) ):
-						wizhi_pagination(); 
+						wizhi_pagination();
 					endif;
 
 				else :
 
-					get_template_part( 'template-parts/content', 'none' );
+					get_template_part( 'wizhi/content', 'none' );
 
 				endif; ?>
 

@@ -1,83 +1,267 @@
 /* --------------------------------------------------------------
-* = 样式重置
+* = 样式重置, 包括重置标签样式和框架通用类样式
 * ----------------------------------------------------------- */
-
 
 /* --------------------------------------------------------------
-* = 通用样式
+* = 通用样式, 设置网站全局通用样式
 * ----------------------------------------------------------- */
-
-// css3动画效果
-.animated{ -webkit-animation-duration:0.5s; animation-duration:0.5s; -webkit-animation-fill-mode:both; animation-fill-mode:both;}
-@-webkit-keyframes fadeInDown{ 0%{ opacity:0; -webkit-transform:translateY(-20px); transform:translateY(-20px);} 100%{ opacity:1; -webkit-transform:translateY(0); transform:translateY(0);}}
-@keyframes fadeInDown{ 0%{ opacity:0; -webkit-transform:translateY(-20px); -ms-transform:translateY(-20px); transform:translateY(-20px);} 100%{ opacity:1; -webkit-transform:translateY(0); -ms-transform:translateY(0); transform:translateY(0);}}
-.fadeInDown{ -webkit-animation-name:fadeInDown; animation-name:fadeInDown;}
-@-webkit-keyframes fadeInUp{ 0%{ opacity:0; -webkit-transform:translateY(20px); transform:translateY(20px);} 100%{ opacity:1; -webkit-transform:translateY(0); transform:translateY(0);}}
-@keyframes fadeInUp{ 0%{ opacity:0; -webkit-transform:translateY(20px); -ms-transform:translateY(20px); transform:translateY(20px);} 100%{ opacity:1; -webkit-transform:translateY(0); -ms-transform: translateY(0); transform:translateY(0);}}
-.fadeInUp{ -webkit-animation-name: fadeInUp; animation-name: fadeInUp;}
-@-webkit-keyframes fadeInLeft{ 0%{ opacity:0; -webkit-transform:translateX(-20px); transform:translateX(-20px);} 100%{ opacity:1; -webkit-transform:translateX(0); transform:translateX(0);}}
-@keyframes fadeInLeft{ 0%{ opacity:0; -webkit-transform:translateX(-20px); -ms-transform:translateX(-20px); transform:translateX(-20px);} 100%{ opacity: 1; -webkit-transform:translateX(0); -ms-transform:translateX(0); transform:translateX(0);}}
-.fadeInLeft{ -webkit-animation-name:fadeInLeft; animation-name:fadeInLeft;}
-
-.sep{
+.sep {
     margin-bottom: 15px;
 }
 
-.pure-button{
-    margin-right: 5px;
-}
-
-.offside{
-    ul{
+.offside {
+    ul {
         padding: 30px;
     }
-    .col{
+    .col {
         padding: 0;
-        ul{
+        ul {
             padding: 0;
         }
     }
 }
 
-
 /* --------------------------------------------------------------
-* = 排版
+* = 整体布局, 很多页面共享的页面框架
 * ----------------------------------------------------------- */
 
+.site-main {
+    margin-top: 30px;
+    @media screen and (max-width: 48em) {
+        margin-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.page-header {
+    border: 3px solid #ddd;
+    padding: @padding;
+    margin-bottom: @padding-lg;
+    .page-title {
+        color: @maincolor;
+        margin-bottom: 15px;
+    }
+    .taxonomy-description {
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// 搜索框
+.search-form{
+    .search-field{
+        width: 73%;
+    }
+    .search-button{
+        width: 27%;
+        margin-right: 0;
+    }
+}
 
 /* --------------------------------------------------------------
-* = 页头
+* = 页头, 网站顶部内容样式
 * ----------------------------------------------------------- */
-.demo-header{
-    background: #2d3e50;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-    padding: 1.5em;
+.site-header {
+    background: @maincolor;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
     color: #fff;
-    margin-bottom: 30px;
-    h1,h3{
+    margin-bottom: 15px;
+    h1, h3 {
         color: #fff;
+    }
+}
+
+.site-title {
+    a {
+        color: #fff;
+        font-size: 18px;
+    }
+    @media screen and (max-width: 48em) {
+        height: 44px;
+        line-height: 44px;
+        a {
+            line-height: 44px;
+        }
+    }
+}
+
+/* --------------------------------------------------------------
+* = 文章页排版
+* ----------------------------------------------------------- */
+.hentry {
+    h2 {
+        border-bottom: 1px dotted #ddd;
+        color: @maincolor;
+        font-size: 18px;
+        padding-bottom: 6px;
+    }
+    h3 {
+        color: #666;
+        font-size: 16px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 5px;
+    }
+}
+
+.entry-header {
+    margin-bottom: @padding-lg;
+    padding-bottom: @padding-md;
+    border-bottom: 3px solid @border-color;
+}
+
+.entry-title {
+
+}
+
+.entry-content {
+    margin-bottom: 30px;
+    p {
+        margin-bottom: 1em;
+    }
+}
+
+.entry-meta {
+
+}
+
+.entry-footer {
+    .entry-tags {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* --------------------------------------------------------------
+* = 首页, 首页独立样式
+* ----------------------------------------------------------- */
+.home{
+
+}
+
+/* --------------------------------------------------------------
+* = 存档页, 注意文章条目显示不要和文章页冲突, 注意文章类型和分类法
+* ----------------------------------------------------------- */
+.archive {
+    .site-main {
+        padding: 0 30px 0 0;
+        background: transparent;
+        @media screen and (max-width: 48em) {
+            padding: 15px;
+        }
+        .media {
+            padding: 30px 0;
+            & + .media {
+                margin-top: 0;
+            }
+        }
+    }
+    .hentry {
+        background: #fff;
+        margin-bottom: @padding-lg;
+        border-bottom: 1px solid @border-color;
+    }
+    .entry-content {
+        padding: 0 30px 30px;
+        position: relative;
+        h2 {
+            border: 0;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+    }
+    .entry-tags {
+
+    }
+}
+
+
+/* --------------------------------------------------------------
+* = 边栏, 注意设置内置小工具样式
+* ----------------------------------------------------------- */
+.widget-area {
+    padding-top: 30px;
+    & > .col {
+        padding-left: 30px;
+    }
+}
+
+.widget {
+    margin-bottom: 50px;
+    a {
+        color: @text-dark;
+        &:hover {
+            color: @maincolor;
+        }
+    }
+}
+
+.widget-title {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.widget_categories {
+    ul {
+        border-bottom: 1px solid @border-color-darker;
+        border-radius: 3px;
+    }
+    li {
+
+    }
+}
+
+.widget_most_rated,
+.widget_recent_entries {
+    li {
+
     }
 }
 
 /* --------------------------------------------------------------
 * = 页脚
 * ----------------------------------------------------------- */
-.demo-footer{
-    border-top: 1px solid #eee;
+.site-footer {
+    background: @background;
+    box-shadow: inset 0 1px 1px 0 rgba(0,0,0,.15);
     padding: 1.5em;
     margin-top: 30px;
 }
 
-/* --------------------------------------------------------------
-* = 边栏
-* ----------------------------------------------------------- */
-
 
 /* --------------------------------------------------------------
-* = 首页
+* = 移动端样式
 * ----------------------------------------------------------- */
-
+.snap-drawer-right {
+    padding-top: 15px;
+    box-shadow: inset 1px 0 0 rgba(0,0,0,.15);
+}
 
 /* --------------------------------------------------------------
-* = 媒体查询
+* = 媒体查询, 注意 min 和 max 的区别, 注意屏幕宽度区别
 * ----------------------------------------------------------- */
+
+@media screen and (min-width: 35.5em) {
+
+}
+
+// 只在桌面端显示
+@media screen and (min-width: 48em) {
+    .site {
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+// 只在移动端显示
+@media screen and (max-width: 48em) {
+    .site-header{
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 64em) {
+
+}
+
