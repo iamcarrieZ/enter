@@ -79,7 +79,13 @@ if ( post_password_required() ) {
 	<?php
 	endif;
 
-	comment_form();
+	$args = [
+		'class_form'   => 'pure-form',
+		'class_submit' => 'pure-button button-primary',
+	];
+
+	comment_form( $args );
+
 	?>
 
 </div><!-- #comments -->
