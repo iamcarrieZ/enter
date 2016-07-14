@@ -11,6 +11,7 @@ npm link gulp-jshint
 npm link gulp-less
 npm link gulp-load-plugins
 npm link gulp-cssnano
+npm link gulp-minify-css
 npm link gulp-plumber
 npm link gulp-rename
 npm link gulp-rev
@@ -28,8 +29,11 @@ npm link minimist
 npm link browser-sync
 npm link gulp-sass
 npm link sprity
+npm link sprity-less
 npm link gulp-copy2
 npm link gulp-shell
 npm link gulp-gh-pages
 npm link harp
+npm link sprity
+npm link sprity-less
 npm link gulp-coffee
