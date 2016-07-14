@@ -19,6 +19,8 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 var pxtorem = require('gulp-pxtorem');
+var sprity = require('sprity');
+var coffee = require('gulp-coffee');
 
 /**
  * 资源说明文件路径
@@ -125,6 +127,9 @@ var jsTasks = function (filename) {
         .pipe(function () {
             return gulpif(enabled.maps, sourcemaps.init());
         })
+        .pipe(function () {
+            return gulpif('*.coffee', coffee({bare: true}).on('error', console.log));
+        })
         .pipe(concat, filename)
         .pipe(uglify, {
             compress: {
@@ -194,6 +199,18 @@ gulp.task('scripts', ['jshint'], function () {
 });
 
 
+// CSS 雪饼图
+gulp.task('sprites', function () {
+    return sprity.src({
+                     src: path.source + 'images/icons/*.{png,jpg,gif}',
+                     style: './_sprite.less', // ... other optional options
+                     // for example if you want to generate scss instead of css
+                     processor: 'less' // make sure you have installed sprity-sass
+                 })
+                 .pipe(gulpif('*.png', gulp.dest(path.dist + 'images'), gulp.dest(path.source + 'styles')));
+});
+
+
 /**
  * 收集所有的字体并输出到 fonts 文件夹
  */
@@ -255,6 +272,7 @@ gulp.task('watch', function () {
     gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
     gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
     gulp.watch([path.source + 'images/**/*'], ['images']);
+    gulp.watch([path.source + 'images/icons/*'], ['sprites']);
     gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
@@ -265,6 +283,7 @@ gulp.task('watch', function () {
 gulp.task('build', function (callback) {
     runSequence('styles',
         'scripts',
+        'sprites',
         ['fonts', 'images'],
         callback);
 });

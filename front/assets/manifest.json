@@ -2,8 +2,10 @@
   "dependencies": {
     "main.js": {
       "files": [
+        "scripts/plugins/*.js",
+        "scripts/plugins/*.coffee",
         "scripts/main.js",
-        "scripts/plugins/*.js"
+        "scripts/main.coffee"
       ],
       "main": true
     },

@@ -32,4 +32,4 @@ npm link gulp-copy2
 npm link gulp-shell
 npm link gulp-gh-pages
 npm link harp
-npm link gulp-pxtorem
+npm link gulp-coffee
