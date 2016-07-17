@@ -15,8 +15,24 @@
       ],
       "main": true
     },
+    "old.css": {
+      "files": [
+        "styles/old.less"
+      ]
+    },
+    "editor.css": {
+      "files": [
+        "styles/editor.less"
+      ],
+      "main": true
+    },
     "modernizr.js": {
       "bower": ["modernizr"]
+    },
+    "html5shiv.js": {
+      "bower": [
+        "html5shiv"
+      ]
     }
   },
   "paths": {

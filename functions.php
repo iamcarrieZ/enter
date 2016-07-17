@@ -121,6 +121,9 @@ function wizhi_enter_scripts() {
 	wp_enqueue_style( 'enter-style-old', get_template_directory_uri() . '/front/dist/styles/old.css' );
 	wp_style_add_data( 'enter-style-old', 'conditional', 'lt IE 9' );
 
+    wp_enqueue_script('enter-html5shiv', get_template_directory_uri() . '/front/dist/scripts/html5shiv.js', [], '30', false);
+    wp_script_add_data('enter-html5shiv', 'conditional', 'lt IE 9');
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
