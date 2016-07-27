@@ -37,3 +37,4 @@ npm link harp
 npm link sprity
 npm link sprity-less
 npm link gulp-coffee
+npm link gulp-pxtorem
