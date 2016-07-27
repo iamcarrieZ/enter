@@ -80,7 +80,7 @@ if ( post_password_required() ) {
 	endif;
 
 	$args = [
-		'class_form'   => 'pure-form',
+		'class_form'   => 'pure-form pure-form-stacked',
 		'class_submit' => 'pure-button button-primary',
 	];
 
