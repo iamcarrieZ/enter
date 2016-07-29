@@ -1,0 +1,21 @@
+{
+  "name": "wizhi/enter",
+  "description": "Enter theme base on wizhi cms",
+  "type": "wordpress-plugin",
+  "require": {
+    "thefold/wordpress-dispatcher": "^1.0",
+    "omnipay/omnipay": "~2.0",
+    "lokielse/omnipay-alipay": "^1.0.0",
+    "vlucas/valitron": "^1.2",
+    "nette/forms": "^2.3",
+    "twig/twig": "~1.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Amos Lee",
+      "email": "iwillhappy1314@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable"
+}
