@@ -32,22 +32,6 @@ add_filter( 'body_class', 'enter_body_classes' );
 
 
 /**
- * 添加文章排版优化 clss 到文章内容
- *
- * @param $classes
- *
- * @return array
- */
-function category_id_class( $classes ) {
-	$classes[] = 'typo';
-
-	return $classes;
-}
-
-add_filter( 'post_class', 'category_id_class' );
-
-
-/**
  * 设置缩略图质量
  */
 add_filter( 'wp_editor_set_quality', 'wp_editor_set_quality_medium' );

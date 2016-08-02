@@ -102,45 +102,47 @@
 /* --------------------------------------------------------------
 * = 文章页排版
 * ----------------------------------------------------------- */
-.hentry {
-    h2 {
-        border-bottom: 1px dotted #ddd;
-        color: @maincolor;
-        font-size: 18px;
-        padding-bottom: 6px;
+.single,
+.page {
+
+    // 标题样式
+    .entry-header {
+        margin-bottom: @padding-lg;
+        padding-bottom: @padding-md;
+        border-bottom: 3px solid @border-color;
+        .entry-title {
+
+        }
+        .entry-meta {
+
+        }
     }
-    h3 {
-        color: #666;
-        font-size: 16px;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 5px;
+
+    // 正文样式
+    .entry-content {
+        margin-bottom: 30px;
+        h2 {
+            border-bottom: 1px dotted #ddd;
+            color: @maincolor;
+            font-size: 18px;
+            padding-bottom: 6px;
+        }
+        h3 {
+            color: #666;
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 1em;
+        }
     }
-}
 
-.entry-header {
-    margin-bottom: @padding-lg;
-    padding-bottom: @padding-md;
-    border-bottom: 3px solid @border-color;
-}
-
-.entry-title {
-
-}
-
-.entry-content {
-    margin-bottom: 30px;
-    p {
-        margin-bottom: 1em;
-    }
-}
-
-.entry-meta {
-
-}
-
-.entry-footer {
-    .entry-tags {
-        margin-bottom: 10px;
+    // 文章尾部信息样式
+    .entry-footer {
+        .entry-tags {
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -155,6 +157,8 @@
 * = 存档页, 注意文章条目显示不要和文章页冲突, 注意文章类型和分类法
 * ----------------------------------------------------------- */
 .archive {
+
+    // 框架布局
     .site-main {
         background: transparent;
         @media screen and (max-width: 48em) {
@@ -167,12 +171,20 @@
             }
         }
     }
-    .hentry {
+
+    // 标准格式样式
+    .format-standard {
         background: #fff;
         margin-bottom: @padding-lg;
         padding-bottom: @padding-lg;
         border-bottom: 1px solid @border-color;
     }
+
+    .entry-title {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
     .entry-content {
         position: relative;
         h2 {

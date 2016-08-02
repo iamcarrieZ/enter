@@ -19,8 +19,8 @@
 
 		<div class="pure-u-1 <?= ( has_post_thumbnail() ) ? 'pure-u-md-3-4' : ''; ?>">
 			<div class="col">
-				<div class="entry-content">
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<div class="typo entry-content">
 					<p><?php echo mb_strimwidth( strip_tags( apply_filters( "the_content", $post->post_content ) ), 0, 120, "…" ); ?></p>
 					<a class="pull-right button-text" href="<?php the_permalink(); ?>">继续阅读</a>
 				</div>
