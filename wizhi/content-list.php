@@ -1,9 +1,8 @@
 <article <?php post_class(); ?>>
 
-	<div class="pure-g">
+	<div class="pure-g row">
 
 		<?php if ( has_post_thumbnail() ): ?>
-
 			<div class="pure-u-1 pure-u-md-1-4">
 				<div class="col">
 					<div class="item-picture">
@@ -15,18 +14,16 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
 		<?php endif; ?>
 
 		<div class="pure-u-1 <?= ( has_post_thumbnail() ) ? 'pure-u-md-3-4' : ''; ?>">
-			<div class="col entry-content">
-
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-				<p><?php echo mb_strimwidth( strip_tags( apply_filters( "the_content", $post->post_content ) ), 0, 120, "…" ); ?></p>
-
-				<a class="pull-right button-text" href="<?php the_permalink(); ?>">继续阅读</a>
+			<div class="col">
+				<div class="entry-content">
+					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					<p><?php echo mb_strimwidth( strip_tags( apply_filters( "the_content", $post->post_content ) ), 0, 120, "…" ); ?></p>
+					<a class="pull-right button-text" href="<?php the_permalink(); ?>">继续阅读</a>
+				</div>
 			</div>
 		</div>
 
