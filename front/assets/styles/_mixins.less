@@ -1,9 +1,6 @@
-/*---------------------------------------------------
-    LESS Elements 0.9
-  ---------------------------------------------------
-    A set of useful LESS mixins
-    More info at: http://lesselements.com
-  ---------------------------------------------------*/
+/* --------------------------------------------------------------
+* = Minxins, 复杂的样式都卸载这里
+* ----------------------------------------------------------- */
 
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
     background: @color;
@@ -39,56 +36,4 @@
     background: -o-linear-gradient(rgb(@stop, @stop, @stop),
     rgb(@start, @start, @start));
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)", rgb(@stop, @stop, @stop), rgb(@start, @start, @start)));
-}
-
-.transition-duration(@duration: 0.2s) {
-    -moz-transition-duration: @duration;
-    -webkit-transition-duration: @duration;
-    -o-transition-duration: @duration;
-    transition-duration: @duration;
-}
-
-.transform(...) {
-    -webkit-transform: @arguments;
-    -moz-transform: @arguments;
-    -o-transform: @arguments;
-    -ms-transform: @arguments;
-    transform: @arguments;
-}
-
-.rotation(@deg:5deg) {
-    .transform(rotate(@deg));
-}
-
-.scale(@ratio:1.5) {
-    .transform(scale(@ratio));
-}
-
-.user-select(@argument: none) {
-    -webkit-user-select: @argument;
-    -moz-user-select: @argument;
-    -ms-user-select: @argument;
-    user-select: @argument;
-}
-
-.translate(@x:0, @y:0) {
-    .transform(translate(@x, @y));
-}
-
-.background-clip(@argument: padding-box) {
-    -moz-background-clip: @argument;
-    -webkit-background-clip: @argument;
-    background-clip: @argument;
-}
-
-.keyframes(@name; @arguments) {
-    @-moz-keyframes @name { @arguments(); }
-    @-webkit-keyframes @name { @arguments(); }
-    @keyframes @name { @arguments(); }
-}
-
-.animation(@arguments) {
-    -webkit-animation: @arguments;
-    -moz-animation: @arguments;
-    animation: @arguments;
 }

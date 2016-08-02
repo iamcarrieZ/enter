@@ -9,30 +9,6 @@
     margin-bottom: 15px;
 }
 
-.offside {
-    ul {
-        padding: 30px;
-    }
-    .col {
-        padding: 0;
-        ul {
-            padding: 0;
-        }
-    }
-}
-
-.class1 {
-
-    .keyframes(fade-in; { 0% {
-        margin-left: 12px;
-    } 100% {
-          font-size: 200px;
-      } });
-
-    .animation(fade-in 0.2s linear alternate)
-
-}
-
 /* --------------------------------------------------------------
 * = 整体布局, 很多页面共享的页面框架
 * ----------------------------------------------------------- */
@@ -48,10 +24,10 @@
 
 .page-header {
     border: 3px solid #ddd;
-    padding: @padding;
-    margin-bottom: @padding-lg;
+    padding: @padding-large-vertical;
+    margin-bottom: @padding-large-horizontal;
     .page-title {
-        color: @maincolor;
+        color: @brand-primary;
         margin-bottom: 15px;
     }
     .taxonomy-description {
@@ -76,7 +52,7 @@
 * = 页头, 网站顶部内容样式
 * ----------------------------------------------------------- */
 .site-header {
-    background: @maincolor;
+    background: @brand-primary;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
     color: #fff;
     margin-bottom: 15px;
@@ -107,9 +83,9 @@
 
     // 标题样式
     .entry-header {
-        margin-bottom: @padding-lg;
-        padding-bottom: @padding-md;
-        border-bottom: 3px solid @border-color;
+        margin-bottom: @padding-large-vertical;
+        padding-bottom: @padding-large-vertical;
+        border-bottom: 3px solid @gray-lighter;
         .entry-title {
 
         }
@@ -123,7 +99,7 @@
         margin-bottom: 30px;
         h2 {
             border-bottom: 1px dotted #ddd;
-            color: @maincolor;
+            color: @brand-primary;
             font-size: 18px;
             padding-bottom: 6px;
         }
@@ -175,9 +151,9 @@
     // 标准格式样式
     .format-standard {
         background: #fff;
-        margin-bottom: @padding-lg;
-        padding-bottom: @padding-lg;
-        border-bottom: 1px solid @border-color;
+        margin-bottom: @padding-base-horizontal;
+        padding-bottom: @padding-base-horizontal;
+        border-bottom: 1px solid @gray-lighter;
     }
 
     .entry-title {
@@ -212,9 +188,9 @@
 .widget {
     margin-bottom: 50px;
     a {
-        color: @text-dark;
+        color: @gray-dark;
         &:hover {
-            color: @maincolor;
+            color: @brand-primary;
         }
     }
 }
@@ -226,7 +202,7 @@
 
 .widget_categories {
     ul {
-        border-bottom: 1px solid @border-color-darker;
+        border-bottom: 1px solid @gray-lighter;
         border-radius: 3px;
     }
     li {
@@ -245,7 +221,7 @@
 * = 页脚
 * ----------------------------------------------------------- */
 .site-footer {
-    background: @background;
+    background: @body-bg;
     box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, .15);
     padding: 1.5em;
     margin-top: 30px;
@@ -254,10 +230,6 @@
 /* --------------------------------------------------------------
 * = 移动端样式
 * ----------------------------------------------------------- */
-.snap-drawer-right {
-    padding-top: 15px;
-    box-shadow: inset 1px 0 0 rgba(0, 0, 0, .15);
-}
 
 /* --------------------------------------------------------------
 * = 媒体查询, 注意 min 和 max 的区别, 注意屏幕宽度区别
@@ -285,4 +257,3 @@
 @media screen and (min-width: 64em) {
 
 }
-
