@@ -14,30 +14,39 @@
 
 get_header(); ?>
 
-<div class="wrap">
-	<div class="pure-g row">
+	<header class="page-header">
+		<div class="wrap">
+			<?php
+			the_title( '<h1 class="page-title">', '</h1>' );
+			the_archive_description( '<div class="taxonomy-description">', '</div>' );
+			?>
+		</div>
+	</header>
 
-		<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
-			<main id="main" class="col site-main" role="main">
+	<div class="wrap">
+		<div class="pure-g row">
 
-				<?php
-				while ( have_posts() ) : the_post();
+			<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
+				<main id="main" class="col site-main" role="main">
 
-					get_template_part( 'wizhi/content', 'page' );
+					<?php
+					while ( have_posts() ) : the_post();
 
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+						get_template_part( 'wizhi/content', 'page' );
 
-				endwhile;
-				?>
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
 
-			</main>
-		</div><!-- #primary -->
+					endwhile;
+					?>
 
-		<?php get_sidebar(); ?>
+				</main>
+			</div><!-- #primary -->
 
+			<?php get_sidebar(); ?>
+
+		</div>
 	</div>
-</div>
 
 <?php get_footer(); ?>

@@ -9,12 +9,22 @@
     margin-bottom: 15px;
 }
 
+.sep-big{
+    margin-bottom: 30px;
+}
+
+a{
+    color: @gray-dark;
+    &:hover{
+        color: @brand-primary;
+    }
+}
+
 /* --------------------------------------------------------------
 * = 整体布局, 很多页面共享的页面框架
 * ----------------------------------------------------------- */
 
 .site-main {
-    margin-top: 30px;
     @media screen and (max-width: 48em) {
         margin-top: 15px;
         padding-left: 15px;
@@ -23,12 +33,14 @@
 }
 
 .page-header {
-    border: 3px solid #ddd;
-    padding: @padding-large-vertical;
-    margin-bottom: @padding-large-horizontal;
+    margin: 0 0 40px;
+    padding: 20px 0;
+    position: relative;
+    background-color: #f7f7f7;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     .page-title {
         color: @brand-primary;
-        margin-bottom: 15px;
     }
     .taxonomy-description {
         p {
@@ -40,11 +52,9 @@
 // 搜索框
 .search-form {
     .search-field {
-        width: 73%;
     }
     .search-button {
-        width: 27%;
-        margin-right: 0;
+
     }
 }
 
@@ -54,9 +64,9 @@
 .site-header {
     background: @brand-primary;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
+    padding: 30px 0;
     color: #fff;
-    margin-bottom: 15px;
-    h1, h3 {
+    .site-title{
         color: #fff;
     }
 }
@@ -78,16 +88,38 @@
 /* --------------------------------------------------------------
 * = 文章页排版
 * ----------------------------------------------------------- */
+
+.entry-meta{
+    color: #777;
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: normal;
+    li{
+        display: inline-block;
+        margin: 0 20px 5px 0;
+        .fa{
+            color: #777;
+            margin-right: 8px;
+        }
+    }
+    a{
+        color: #777;
+    }
+}
+
+
 .single,
 .page {
 
     // 标题样式
     .entry-header {
-        margin-bottom: @padding-large-vertical;
-        padding-bottom: @padding-large-vertical;
+        margin-bottom: @padding-large-vertical * 2;
         border-bottom: 3px solid @gray-lighter;
         .entry-title {
-
+            color: @gray-base;
+            font-size: 21px;
+            font-weight: 500;
+            margin-bottom: 10px;
         }
         .entry-meta {
 
@@ -158,7 +190,7 @@
 
     .entry-title {
         margin-top: 0;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
     }
 
     .entry-content {
@@ -179,7 +211,6 @@
 * = 边栏, 注意设置内置小工具样式
 * ----------------------------------------------------------- */
 .widget-area {
-    padding-top: 30px;
     & > .col {
         padding-left: 30px;
     }
@@ -197,7 +228,9 @@
 
 .widget-title {
     margin-bottom: 10px;
-    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    color: @gray-base;
 }
 
 .widget_categories {
@@ -210,11 +243,47 @@
     }
 }
 
-.widget_most_rated,
+.widget_archive,
+.widget_categories,
+.widget_recent_comments,
 .widget_recent_entries {
-    li {
-
+    ul{
+        li {
+            padding: 6px 0;
+            border-bottom: 1px solid @gray-lighter;
+            &:first-child{
+                border-top: 1px solid @gray-lighter;
+            }
+        }
     }
+    a{
+        &:before{
+            font-family: "FontAwesome";
+            font-weight: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            margin-right: 10px;
+            color: #999;
+            display: inline-block;
+        }
+    }
+
+}
+
+// 侧边栏列表前的小图标
+.widget_recent_entries a:before {
+    content: "\f0f6";
+}
+.widget_recent_comments a:first-child:before {
+    content: "\f0e5";
+}
+.widget_archive a:before {
+    content: "\f016";
+}
+.widget_categories a:before {
+    content: "\f114";
 }
 
 /* --------------------------------------------------------------
@@ -225,6 +294,13 @@
     box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, .15);
     padding: 1.5em;
     margin-top: 30px;
+}
+
+.footer-navigation{
+    .menu-item{
+        display: inline-block;
+        margin-right: 15px;
+    }
 }
 
 /* --------------------------------------------------------------

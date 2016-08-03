@@ -79,9 +79,32 @@ if ( post_password_required() ) {
 	<?php
 	endif;
 
+	$fields =  array(
+		'author' =>
+			'<p class="form-group comment-form-author"><label for="author">' . __( 'Name', 'enter' ) . '</label> ' .
+			( $req ? '<span class="required">*</span>' : '' ) .
+			'<input id="author" class="form-control" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+			'" size="30"' . $aria_req . ' /></p>',
+
+		'email' =>
+			'<p class="form-group comment-form-email"><label for="email">' . __( 'Email', 'enter' ) . '</label> ' .
+			( $req ? '<span class="required">*</span>' : '' ) .
+			'<input id="email" class="form-control" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+			'" size="30"' . $aria_req . ' /></p>',
+
+		'url' =>
+			'<p class="form-group comment-form-url"><label for="url">' . __( 'Website', 'enter' ) . '</label>' .
+			'<input id="url" class="form-control" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+			'" size="30" /></p>',
+	);
+
 	$args = [
 		'class_form'   => 'pure-form pure-form-stacked',
-		'class_submit' => 'pure-button button-primary',
+		'class_submit' => 'btn btn-primary',
+		'fields' => apply_filters( 'form-group comment_form_default_fields', $fields ),
+		'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'enter' ) .
+		                    '</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true">' .
+		                    '</textarea></p>',
 	];
 
 	comment_form( $args );

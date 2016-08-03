@@ -15,8 +15,24 @@
 
 <footer id="colophon" class="site-footer" role="contentinfo">
 
-	<div class="wrap site-info pure-center-md">
-		Copyright ©<?= date('Y'); ?> <a href="<?= home_url(); ?>"><?php bloginfo('name'); ?></a>
+	<div class="pure-g wrap">
+
+		<div class="pure-u-3-4">
+			<nav id="footer-navigation" class="clearfix footer-navigation" role="navigation">
+				<?php wp_nav_menu( [
+					'theme_location' => 'footer',
+					'menu_id'        => 'footer-menu',
+					'container'      => 'div',
+				] ); ?>
+			</nav>
+		</div>
+
+		<div class="pure-u-1-4">
+			<div class="text-right site-info pure-center-md">
+				Copyright ©<?= date( 'Y' ); ?> <a href="<?= home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
+			</div>
+		</div>
+
 	</div>
 
 </footer>
