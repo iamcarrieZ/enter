@@ -17,4 +17,4 @@
 		<?php comments_popup_link( esc_html__( '0 Comments', 'total' ), esc_html__( '1 Comment', 'total' ), esc_html__( '% Comments', 'total' ), 'comments-link' ); ?>
 	</li>
 
-</ul><!-- .meta -->
+</ul>

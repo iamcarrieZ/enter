@@ -19,7 +19,7 @@
 			}
 		?>
 		<?php get_template_part( 'wizhi/part/post', 'entry-meta'); ?>
-	</header><!-- .entry-header -->
+	</header>
 
 	<div class="typo entry-content">
 		<?php
@@ -34,9 +34,9 @@
 				'after'  => '</div>',
 			) );
 		?>
-	</div><!-- .entry-content -->
+	</div>
 
 	<footer class="entry-footer">
 		<?php enter_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</footer>
 </article><!-- #post-## -->
