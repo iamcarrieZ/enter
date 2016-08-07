@@ -89,7 +89,7 @@ if ( post_password_required() ) {
 		'class_form'    => 'pure-form pure-form-stacked',
 		'class_submit'  => 'btn btn-primary',
 		'fields'        => apply_filters( 'comment_form_default_fields', $fields ),
-		'comment_field' => '<p class="form-group comment-form-comment"><label for="comment">' . _x( 'Comment', 'enter' ) . '</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true">' . '</textarea></p>',
+		'comment_field' => '<p class="form-group comment-form-comment"><label for="comment">' . __( 'Comment Content', 'enter' ) . '</label><textarea id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true">' . '</textarea></p>',
 	];
 
 	comment_form( $args );
