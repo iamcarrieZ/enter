@@ -9,13 +9,13 @@
     margin-bottom: 15px;
 }
 
-.sep-big{
+.sep-big {
     margin-bottom: 30px;
 }
 
-a{
+a {
     color: @gray-dark;
-    &:hover{
+    &:hover {
         color: @brand-primary;
     }
 }
@@ -66,7 +66,7 @@ a{
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
     padding: 30px 0;
     color: #fff;
-    .site-title{
+    .site-title {
         color: #fff;
     }
 }
@@ -89,24 +89,23 @@ a{
 * = 文章页排版
 * ----------------------------------------------------------- */
 
-.entry-meta{
+.entry-meta {
     color: #777;
     font-size: 12px;
     margin-bottom: 10px;
     line-height: normal;
-    li{
+    li {
         display: inline-block;
         margin: 0 15px 5px 0;
-        .fa{
+        .fa {
             color: #777;
             margin-right: 5px;
         }
     }
-    a{
+    a {
         color: #777;
     }
 }
-
 
 .single,
 .page {
@@ -159,7 +158,7 @@ a{
 * ----------------------------------------------------------- */
 .home {
 
-    .site-content{
+    .site-content {
         padding-top: 30px;
     }
 
@@ -185,7 +184,7 @@ a{
     }
 
     // 标准格式样式
-    .format-standard {
+    .hentry {
         background: #fff;
         margin-bottom: @padding-base-horizontal * 2;
         padding-bottom: @padding-base-horizontal * 2;
@@ -204,7 +203,7 @@ a{
             margin-top: 0;
             font-size: 1.4em;
         }
-        p{
+        p {
             margin-bottom: 0;
         }
     }
@@ -240,31 +239,21 @@ a{
     color: @gray-base;
 }
 
-.widget_categories {
-    ul {
-        border-bottom: 1px solid @gray-lighter;
-        border-radius: 3px;
-    }
-    li {
-
-    }
-}
-
 .widget_archive,
 .widget_categories,
 .widget_recent_comments,
 .widget_recent_entries {
-    ul{
+    ul {
         li {
             padding: 6px 0;
             border-bottom: 1px solid @gray-lighter;
-            &:first-child{
+            &:first-child {
                 border-top: 1px solid @gray-lighter;
             }
         }
     }
-    a{
-        &:before{
+    a {
+        &:before {
             font-family: "FontAwesome";
             font-weight: normal;
             font-style: normal;
@@ -283,12 +272,15 @@ a{
 .widget_recent_entries a:before {
     content: "\f0f6";
 }
+
 .widget_recent_comments a:first-child:before {
     content: "\f0e5";
 }
+
 .widget_archive a:before {
     content: "\f016";
 }
+
 .widget_categories a:before {
     content: "\f114";
 }
@@ -303,8 +295,8 @@ a{
     margin-top: 30px;
 }
 
-.footer-navigation{
-    .menu-item{
+.footer-navigation {
+    .menu-item {
         display: inline-block;
         margin-right: 15px;
     }
