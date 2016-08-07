@@ -14,7 +14,7 @@
 
 	<li class="meta-comments comment-scroll">
 		<span class="fa fa-comment-o"></span>
-		<?php comments_popup_link( esc_html__( '0 Comments', 'total' ), esc_html__( '1 Comment', 'total' ), esc_html__( '% Comments', 'total' ), 'comments-link' ); ?>
+		<?php comments_popup_link( esc_html__( '0 Comments', 'enter' ), esc_html__( '1 Comment', 'enter' ), esc_html__( '% Comments', 'enter' ), 'comments-link' ); ?>
 	</li>
 
 </ul>

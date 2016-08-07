@@ -96,10 +96,10 @@ a{
     line-height: normal;
     li{
         display: inline-block;
-        margin: 0 20px 5px 0;
+        margin: 0 15px 5px 0;
         .fa{
             color: #777;
-            margin-right: 8px;
+            margin-right: 5px;
         }
     }
     a{
@@ -159,6 +159,10 @@ a{
 * ----------------------------------------------------------- */
 .home {
 
+    .site-content{
+        padding-top: 30px;
+    }
+
 }
 
 /* --------------------------------------------------------------
@@ -183,8 +187,8 @@ a{
     // 标准格式样式
     .format-standard {
         background: #fff;
-        margin-bottom: @padding-base-horizontal;
-        padding-bottom: @padding-base-horizontal;
+        margin-bottom: @padding-base-horizontal * 2;
+        padding-bottom: @padding-base-horizontal * 2;
         border-bottom: 1px solid @gray-lighter;
     }
 
@@ -199,6 +203,9 @@ a{
             border: 0;
             margin-top: 0;
             font-size: 1.4em;
+        }
+        p{
+            margin-bottom: 0;
         }
     }
 
@@ -264,7 +271,7 @@ a{
             letter-spacing: normal;
             text-rendering: auto;
             -webkit-font-smoothing: antialiased;
-            margin-right: 10px;
+            margin-right: 6px;
             color: #999;
             display: inline-block;
         }

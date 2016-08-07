@@ -24,7 +24,7 @@ if ( $has_terms || wpex_is_post_in_series() ) {
 
 <?php if ( $prev_link || $next_link ) : ?>
 
-	<<nav> class="post-pagination-wrap clr">
+	<nav> class="post-pagination-wrap clr">
 
 		<ul class="pager">
 
@@ -42,6 +42,6 @@ if ( $has_terms || wpex_is_post_in_series() ) {
 			
 		</ul><!-- .post-post-pagination -->
 
-	</div><!-- .post-pagination-wrap -->
+	</nav><!-- .post-pagination-wrap -->
 
 <?php endif; ?>
