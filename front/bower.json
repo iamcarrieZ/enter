@@ -8,11 +8,20 @@
   "private": true,
   "dependencies": {
     "modernizr": "2.8.2",
-    "html5shiv": "^3.7.3"
+    "html5shiv": "^3.7.3",
+    "imagesloaded": "^4.1.0",
+    "masonry": "^4.1.0",
+    "isotope": "^3.0.1"
   },
   "overrides": {
     "modernizr": {
       "main": "./modernizr.js"
+    },
+    "masonry": {
+      "main": "./dist/masonry.pkgd.js"
+    },
+    "isotope": {
+      "main": "./dist/isotope.pkgd.js"
     }
   }
 }

@@ -5,7 +5,7 @@
 		<?php if ( has_post_thumbnail() ): ?>
 			<div class="pure-u-1 pure-u-md-1-4">
 				<div class="col">
-					<div class="item-picture">
+					<div class="media-hover">
 						<a href="<?php the_permalink(); ?>">
 							<?php the_post_thumbnail( 'archive' ); ?>
 						</a>

@@ -29,10 +29,17 @@
     "modernizr.js": {
       "bower": ["modernizr"]
     },
+    "imagesloaded.js": {
+      "bower": ["imagesloaded"]
+    },
+    "masonry.js": {
+      "bower": ["masonry"]
+    },
+    "isotope.js": {
+      "bower": ["isotope"]
+    },
     "html5shiv.js": {
-      "bower": [
-        "html5shiv"
-      ]
+      "bower": ["html5shiv"]
     }
   },
   "paths": {
