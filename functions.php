@@ -42,6 +42,7 @@ function enter_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'archive', 200, 150, true );
+	add_image_size( 'masonry', 210, 160, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

@@ -14,43 +14,44 @@
 
 get_header(); ?>
 
-<div class="wrap archive">
-	<div class="pure-g row">
 
-		<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
-			<main id="main" class="col site-main" role="main">
+	<div class="wrap archive">
+		<div class="pure-g row">
 
-				<?php
-				if ( have_posts() ) :
+			<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
+				<main id="main" class="col site-main" role="main">
 
-					if ( is_home() && ! is_front_page() ) : ?>
-						<header>
-							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-						</header>
+					<?php
+					if ( have_posts() ) :
 
-						<?php
-					endif;
+						if ( is_home() && ! is_front_page() ) : ?>
+							<header>
+								<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+							</header>
 
-					while ( have_posts() ) : the_post();
-						get_template_part( 'wizhi/content', 'list' );
-					endwhile;
+							<?php
+						endif;
 
-					if ( function_exists( 'wizhi_pagination' ) ):
-						wizhi_pagination();
-					endif;
+						while ( have_posts() ) : the_post();
+							get_template_part( 'wizhi/content', 'list' );
+						endwhile;
 
-				else :
+						if ( function_exists( 'wizhi_bootstrap_pagination' ) ):
+							wizhi_bootstrap_pagination();
+						endif;
 
-					get_template_part( 'wizhi/content', 'none' );
+					else :
 
-				endif; ?>
+						get_template_part( 'wizhi/content', 'none' );
 
-			</main><!-- #main -->
-		</div><!-- #primary -->
+					endif; ?>
 
-		<?php get_sidebar(); ?>
+				</main><!-- #main -->
+			</div><!-- #primary -->
 
+			<?php get_sidebar(); ?>
+
+		</div>
 	</div>
-</div>
 
 <?php get_footer(); ?>

@@ -33,8 +33,8 @@ get_header(); ?>
 							get_template_part( 'wizhi/content', 'list' );
 						endwhile;
 
-						if ( function_exists( 'wizhi_pagination' ) ):
-							wizhi_pagination();
+						if ( function_exists( 'wizhi_bootstrap_pagination' ) ):
+							wizhi_bootstrap_pagination();
 						endif;
 
 					else :
