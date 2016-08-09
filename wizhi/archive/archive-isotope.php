@@ -21,7 +21,7 @@ get_header(); ?>
 	<div class="wrap">
 		<div class="pure-g row">
 
-			<div id="primary" class="pure-u-1 pure-u-md-3-4 content-area">
+			<div id="primary" class="pure-u-1">
 				<main id="main" class="col site-main" role="main">
 
 					<?php
@@ -45,8 +45,6 @@ get_header(); ?>
 
 				</main>
 			</div>
-
-			<?php get_sidebar(); ?>
 
 		</div>
 	</div>
