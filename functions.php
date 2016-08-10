@@ -74,6 +74,11 @@ function enter_setup() {
 		'link',
 	) );
 
+    /**
+     * 添加编辑器样式
+     */
+    add_editor_style( get_template_directory_uri() . '/front/dist/styles/editor.css' );
+
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'enter_custom_background_args', array(
 		'default-color' => 'ffffff',
