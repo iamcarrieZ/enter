@@ -11,7 +11,8 @@
     "html5shiv": "^3.7.3",
     "imagesloaded": "^4.1.0",
     "masonry": "^4.1.0",
-    "isotope": "^3.0.1"
+    "isotope": "^3.0.1",
+    "fancybox": "^2.1.5"
   },
   "overrides": {
     "modernizr": {
@@ -22,6 +23,9 @@
     },
     "isotope": {
       "main": "./dist/isotope.pkgd.js"
+    },
+    "fancybox": {
+      "main": "./source/jquery.fancybox.js"
     }
   }
 }

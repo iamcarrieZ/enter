@@ -19,6 +19,11 @@
         "styles/old.less"
       ]
     },
+    "fancybox.css": {
+      "files": [
+        "styles/_fancybox.less"
+      ]
+    },
     "editor.css": {
       "files": [
         "styles/editor.less"
@@ -41,6 +46,9 @@
     },
     "isotope.js": {
       "bower": ["isotope"]
+    },
+    "fancybox.js": {
+      "bower": ["fancybox"]
     },
     "html5shiv.js": {
       "bower": ["html5shiv"]
