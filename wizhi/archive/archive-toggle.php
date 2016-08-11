@@ -24,7 +24,7 @@ get_header(); ?>
 					<?php
 					if ( have_posts() ) : ?>
 
-						<dl class="toggle sep">
+						<dl class="accordion sep">
 							<?php while ( have_posts() ) : the_post(); ?>
 
 								<dt>
