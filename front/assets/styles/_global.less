@@ -10,7 +10,7 @@
 }
 
 .sep-big {
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 a {
@@ -153,6 +153,24 @@ a {
     .entry-footer {
         .entry-tags {
             margin-bottom: 10px;
+        }
+    }
+}
+
+.page-subtitle{
+    background: #eee;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    margin-top: -40px;
+    li{
+        display: inline-block;
+        margin-right: 15px;
+        &.current_page_item{
+            a{
+                color: @brand-primary;
+            }
         }
     }
 }
