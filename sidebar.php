@@ -7,7 +7,7 @@
  * @package enter
  */
 
-if ( ! is_active_sidebar( 'sidebar-main' ) || wp_is_mobile() ) {
+if ( ! is_active_sidebar( 'sidebar-main' ) ) {
 	return;
 }
 ?>
