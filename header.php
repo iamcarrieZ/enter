@@ -40,7 +40,12 @@
 					<div class="col">
 						<div class="site-branding pure-center-md">
 							<h1 class="site-title">
-								<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<?php $logo = get_option('site_logo'); ?>
+								<?php if($logo) : ?>
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?= $logo; ?>" alt="<?php bloginfo( 'name' ); ?>"></a>
+								<?php else: ?>
+									<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+								<?php endif; ?>
 							</h1>
 						</div><!-- .site-branding -->
 					</div>

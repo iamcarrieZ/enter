@@ -158,3 +158,16 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+
+/**
+ * 自定义字段
+ */
+require get_template_directory() . '/inc/fields.php';
+
+
+/**
+ * 主题设置
+ */
+require get_template_directory() . '/inc/settings.php';
+
