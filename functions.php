@@ -9,7 +9,7 @@
 
 if ( ! function_exists( 'enter_setup' ) ) :
 /**
- * Sets up theme defaults and registers support for various WordPress features.
+ * 设置默认选项、添加 WordPress 功能支持
  *
  * Note that this function is hooked into the after_setup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
@@ -17,18 +17,18 @@ if ( ! function_exists( 'enter_setup' ) ) :
  */
 function enter_setup() {
 	/*
-	 * Make theme available for translation.
+	 * 主题翻译支持
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on enter, use a find and replace
 	 * to change 'enter' to the name of your theme in all the template files.
 	 */
 	load_theme_textdomain( 'enter', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
+	// 添加默认的文章和评论 RSS 源链接到 head 中
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
-	 * Let WordPress manage the document title.
+	 * 添加标题标签支持
 	 * By adding theme support, we declare that this theme does not use a
 	 * hard-coded <title> tag in the document head, and expect WordPress to
 	 * provide it for us.
@@ -44,15 +44,14 @@ function enter_setup() {
 	add_image_size( 'archive', 200, 150, true );
 	add_image_size( 'masonry', 210, 160, true );
 
-	// This theme uses wp_nav_menu() in one location.
+	// 菜单位置，在 wp_nav_menu() 中使用
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'enter' ),
 		'footer' => esc_html__( 'Footer', 'enter' ),
 	) );
 
 	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
+	 * 转化默认的表单元素为 HTML5
 	 */
 	add_theme_support( 'html5', array(
 		'search-form',
@@ -63,7 +62,7 @@ function enter_setup() {
 	) );
 
 	/*
-	 * Enable support for Post Formats.
+	 * 添加文章格式支持
 	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
@@ -101,7 +100,7 @@ function enter_content_width() {
 add_action( 'after_setup_theme', 'enter_content_width', 0 );
 
 /**
- * Register widget area.
+ * 注册小工具区域
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
@@ -120,7 +119,7 @@ add_action( 'widgets_init', 'enter_widgets_init' );
 
 
 /**
- * Enqueue scripts and styles.
+ * 添加样式和脚本
  */
 function wizhi_enter_scripts() {
 	wp_enqueue_style( 'enter-style', get_template_directory_uri() . '/front/dist/styles/main.css' );
@@ -140,22 +139,22 @@ add_action( 'wp_enqueue_scripts', 'wizhi_enter_scripts' );
 
 
 /**
- * Implement the Custom Header feature.
+ * 实现自定义头部功能
  */
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
- * Custom template tags for this theme.
+ * 自定义模板标签
  */
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Custom functions that act independently of the theme templates.
+ * 主题附加功能函数
  */
 require get_template_directory() . '/inc/extras.php';
 
 /**
- * Customizer additions.
+ * 主题自定义
  */
 require get_template_directory() . '/inc/customizer.php';
 

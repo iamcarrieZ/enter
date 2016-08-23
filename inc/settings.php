@@ -13,7 +13,6 @@ function wizhi_enter_settings() {
 		],
 	];
 
-
 	$args_option = [
 		'parent' => 'themes.php',
 		'slug'  => 'wizhi-enter-settings',
@@ -21,5 +20,7 @@ function wizhi_enter_settings() {
 		'title' => __( '主题设置', 'wizhi' ),
 	];
 
-	new WizhiOptionPage( $fields, $args_option );
+	if ( class_exists( 'WizhiOptionPage' ) ) {
+		new WizhiOptionPage( $fields, $args_option );
+	}
 }
