@@ -35,6 +35,9 @@
         "scripts/plugins/jquery-ias.min.js"
       ]
     },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
     "modernizr.js": {
       "bower": ["modernizr"]
     },
