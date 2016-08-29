@@ -12,7 +12,9 @@
     "imagesloaded": "^4.1.0",
     "masonry": "^4.1.0",
     "isotope": "^3.0.1",
-    "fancybox": "^2.1.5"
+    "fancybox": "^2.1.5",
+    "equalize": "^1.0.2",
+    "jquery-fullheight": "^1.0.8"
   },
   "overrides": {
     "modernizr": {
