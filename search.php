@@ -11,6 +11,11 @@ get_header(); ?>
 
 	<header class="page-header">
 		<div class="wrap">
+			<?php
+			if ( function_exists('yoast_breadcrumb') ) {
+				yoast_breadcrumb('<p id="breadcrumbs" class="breadcrumbs">','</p>');
+			}
+			?>
 			<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'enter' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		</div>
 	</header>

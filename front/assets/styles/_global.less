@@ -28,6 +28,20 @@ a {
     height: 38px;
     line-height: 38px;
     float: right;
+    &:before{
+        content: "\f015";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        margin-right: 5px;
+        color: @brand-primary;
+    }
+    color: #999;
+    a{
+        color: #999;
+        &:hover{
+            color: @brand-primary;
+        }
+    }
 }
 
 /* --------------------------------------------------------------
